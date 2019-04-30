@@ -1,0 +1,68 @@
+﻿@page "{id:int?}"
+@model CarLot.Pages.Cars.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.car.Name)</h4>
+    <hr />
+    <dl class="dl-horizontal" "
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.ReleaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.ReleaseDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Engine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Engine)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Doors)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Doors)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Fuel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Fuel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Gearbox)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Gearbox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car.ImageUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.ImageUrl)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.car.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

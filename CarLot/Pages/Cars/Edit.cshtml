@@ -1,0 +1,70 @@
+﻿@page "{id:int}"
+@model CarLot.Pages.Cars.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>@Html.DisplayFor(model => model.car.Name)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="car.ID" />
+            <div class="form-group">
+                <label asp-for="car.Name" class="control-label"></label>
+                <input asp-for="car.Name" class="form-control" />
+                <span asp-validation-for="car.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.Type" class="control-label"></label>
+                <input asp-for="car.Type" class="form-control" />
+                <span asp-validation-for="car.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.ReleaseDate" class="control-label"></label>
+                <input asp-for="car.ReleaseDate" class="form-control" />
+                <span asp-validation-for="car.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.Engine" class="control-label"></label>
+                <input asp-for="car.Engine" class="form-control" />
+                <span asp-validation-for="car.Engine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.Doors" class="control-label"></label>
+                <input asp-for="car.Doors" class="form-control" />
+                <span asp-validation-for="car.Doors" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.Fuel" class="control-label"></label>
+                <input asp-for="car.Fuel" class="form-control" />
+                <span asp-validation-for="car.Fuel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.Gearbox" class="control-label"></label>
+                <input asp-for="car.Gearbox" class="form-control" />
+                <span asp-validation-for="car.Gearbox" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car.ImageUrl" class="control-label"></label>
+                <input asp-for="car.ImageUrl" class="form-control" />
+                <span asp-validation-for="car.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

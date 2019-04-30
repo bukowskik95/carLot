@@ -1,0 +1,70 @@
+﻿@page "{id:int}"
+@model CarLot.Pages.Cars.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.ReleaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.ReleaseDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Engine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Engine)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Doors)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Doors)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Fuel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Fuel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.Gearbox)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.Gearbox)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.car.ImageUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.car.ImageUrl)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="car.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
